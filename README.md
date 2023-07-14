@@ -73,5 +73,5 @@
 
 ### Estas duas opções são para manter o container aberto a comunicação do container fazendo com que seja mais fácil de interagir
 
-```   stdin_open: true
+-```stdin_open: true
     tty: true```

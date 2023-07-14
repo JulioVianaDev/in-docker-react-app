@@ -62,7 +62,7 @@
 
 ### Agora as portas, lembram que lá no Dockerfile nós colocamos o container para jogar para a porta 3000? então o que vamos fazer agora é pegar a porta 3000 do container e jogar a nossa localhost na porta 3000
 
--``` ports:
+-``` ports:<br>
       - "3000:3000"```
 
 

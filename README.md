@@ -68,10 +68,10 @@
 
 ### Agora vamos ao pulo do gato, para poder rodar o nosso projeto SEMPRE que editarmos o código ele recompilar precisamos criar uma coisa chamada volume, tudo dentro do volume é "mudável" então vamos imaginar que ele consiga saber quando vc editou teu código, mas como ele faz isto?Ele utiliza do seguinte pressuposto pra montar: nome_do_volume/Caminho_do_container, Lembram que nomeamos no Dockerfile o WORKDIR /app então agora vamos usar ele como caminho do volume para que tudo que estiver no nosso projeto seja automaticamente enviado a imagem
 
--```    volumes:
+-```volumes:
       - .:/app```
 
-### Estas duas opções são para manter o container
+### Estas duas opções são para manter o container aberto a comunicação do container fazendo com que seja mais fácil de interagir
 
-    stdin_open: true
-    tty: true
+```   stdin_open: true
+    tty: true```

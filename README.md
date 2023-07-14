@@ -62,13 +62,14 @@
 
 ### Agora as portas, lembram que lá no Dockerfile nós colocamos o container para jogar para a porta 3000? então o que vamos fazer agora é pegar a porta 3000 do container e jogar a nossa localhost na porta 3000
 
--``` ports:<br>
+-``` ports:
       - "3000:3000"```
 
 
-### Agora vamos ao pulo do gato, para poder rodar o nosso projeto SEMPRE que editarmos o código ele recompilar precisamos criar uma coisa chamada volume, tudo dentro do volume é "mudável" então vamos imaginar que ele consiga saber quando vc editou teu código, mas como ele faz isto?Ele utiliza do seguinte pressuposto pra montar: nome_do_volume/Caminho_do_container
+### Agora vamos ao pulo do gato, para poder rodar o nosso projeto SEMPRE que editarmos o código ele recompilar precisamos criar uma coisa chamada volume, tudo dentro do volume é "mudável" então vamos imaginar que ele consiga saber quando vc editou teu código, mas como ele faz isto?Ele utiliza do seguinte pressuposto pra montar: nome_do_volume/Caminho_do_container, Lembram que nomeamos no Dockerfile o WORKDIR /app então agora vamos usar ele como caminho do volume para que tudo que estiver no nosso projeto seja automaticamente enviado a imagem
 
-    volumes:
-      - .:/app
+```    volumes:
+      - .:/app```
+
     stdin_open: true
     tty: true

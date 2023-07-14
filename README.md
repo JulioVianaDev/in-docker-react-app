@@ -58,11 +58,11 @@
 
 ### O build se refere aonde está o nosso Dockerfile eu coloquei . porque ele se encontra no mesmo diretório da pasta
 
--```    build: .```
+-```build: .```
 
 ### Agora as portas, lembram que lá no Dockerfile nós colocamos o container para jogar para a porta 3000? então o que vamos fazer agora é pegar a porta 3000 do container e jogar a nossa localhost na porta 3000
 
--``` ports:
+-```ports:
       - "3000:3000"```
 
 

@@ -41,4 +41,34 @@
 
 ## Docker-compose
 
+### Docker-compose é uma ferramenta pra poder manipular containers e ligar eles, mas também serve pra fazer a imagem "recarregar" sempre que for alterada para isto vamos as explicações das linhas do docker-compose.yaml
 
+
+### Versão do docker-compose que estou usando
+
+-```version: '3.9'```
+
+### Serviços(containers rodando o nosso projeto) que estão rodando, preste muuuita atenção nos TAB(espaços do lado) das linhas a identação importa muito
+
+-```services:```
+
+### O nome do serviço que eu desejo criar é "frontend" genérico? Talvez, ia ser mais legal se eu chamasse de tomate? Com certeza mas a idéia é simplificar, 
+
+-```frontend:```
+
+### O build se refere aonde está o nosso Dockerfile eu coloquei . porque ele se encontra no mesmo diretório da pasta
+
+-```    build: .```
+
+### Agora as portas, lembram que lá no Dockerfile nós colocamos o container para jogar para a porta 3000? então o que vamos fazer agora é pegar a porta 3000 do container e jogar a nossa localhost na porta 3000
+
+-``` ports:
+      - "3000:3000"```
+
+
+### Agora vamos ao pulo do gato, para poder rodar o nosso projeto SEMPRE que editarmos o código ele recompilar precisamos criar uma coisa chamada volume, tudo dentro do volume é "mudável" então vamos imaginar que ele consiga saber quando vc editou teu código, mas como ele faz isto?Ele utiliza do seguinte pressuposto pra montar: nome_do_volume/Caminho_do_container
+
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true

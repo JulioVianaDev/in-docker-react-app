@@ -75,3 +75,13 @@
 
 -```stdin_open: true
     tty: true```
+
+# Como rodar o projeto:
+
+## Precisa ter instalado o docker e o docker-compose no seu computador(docker-compose já vem com o docker):
+
+- <a href="https://docs.docker.com/engine/install/" __blank> Docker </a>
+
+## E para rodar este template e iniciar o seu docker-compose basta usar:
+
+```docker-compose up```

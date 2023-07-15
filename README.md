@@ -2,6 +2,8 @@
 
 ### Então por isto o projeto App.js está como um projeto React recém criado
 
+<img src="./images-readme/react-dockerizado.png">
+
 ## Dockerfile
 
 ### Primeiro vamos entender o Dockerfile, a tarefa dele é criar uma imagem do nosso projeto, mas como funciona uma imagem? Ela precisa de algumas coisas para funcionar, a primeira delas é qual "linguagem"(pode ser um banco de dados ou SO porém lembrando, estamos descomplicando) ele usará no nosso caso colocamos:
